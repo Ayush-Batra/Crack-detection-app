@@ -7,16 +7,15 @@ This code is a Kivy application that uses a TensorFlow model to detect cracks in
 
 To install the packages listed in a requirements.txt file, you can use the following command:
    
-    ```
+   
     pip install -r requirements.txt
-    ```
+    
 
 ## Usage
 
 To run the app, you can use the following command:
    
-    ```
+  
     python3 app.py
-    ```
     
 
