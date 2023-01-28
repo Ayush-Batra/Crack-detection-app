@@ -1,0 +1,91 @@
+#:kivy 2.1.0
+WindowManager:
+    Homepage:
+    Detectionpage:
+    Metricspage:
+
+
+
+<Homepage>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            size: (self.width, self.height)
+            pos: self.pos
+
+    FloatLayout:
+        Image:
+            source: 'Android Large - 1.png'
+        
+        #create a button
+        Button:
+            #make button color transparent
+            background_color: 0, 0, 0, 0
+
+            size_hint: .2,.07
+            pos_hint: {'x': .75, 'y': .02 }
+            on_press: app.root.current = 'detect'
+
+<Detectionpage>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            size: (self.width, self.height)
+            pos: self.pos
+
+    FloatLayout:
+        Image:
+            source: 'Android Large - 2.png'
+        
+        Label:
+            text: root.text
+            font_size: 30
+            color: 1, 1, 1, 1
+            bold: True
+            text_size : root.width, root.height
+            pos_hint: {'x': .1, 'y': .22 }
+        
+        #create a button
+        Button:
+            #make button color transparent
+            background_color: 0, 0, 0, 0
+
+            size_hint: .2,.07
+            pos_hint: {'x': .4, 'y': .05 }
+            on_press: 
+                root.run_model()
+        Image:
+            source: root.path
+            allow_stretch:  False
+            size_hint: 0.78, 0.31
+            pos_hint: {'center_x' : 0.49, 'center_y' : 0.685}
+        Button:
+            #make button color transparent
+            background_color: 0, 0, 0, 0
+
+            size_hint: .5,.07
+            pos_hint: {'x': .27, 'y': .35}
+            on_press: app.root.current = 'metrics'
+
+<Metricspage>:
+    canvas:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            size: (self.width, self.height)
+            pos: self.pos
+
+    FloatLayout:
+        Image:
+            source: 'Android Large - 3.png'
+        
+        #create a button
+        Button:
+            #make button color transparent
+            background_color: 0, 0, 0, 0
+
+            size_hint: .2,.07
+            pos_hint: {'x': .45, 'y': .02 }
+            on_press: app.root.current = 'home'
