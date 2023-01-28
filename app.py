@@ -1,38 +1,15 @@
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.core.window import Window
-
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.image import Image
-from kivy.uix.button import Button
-from kivy.uix.label import Label
-from kivy.uix.textinput import TextInput
 from kivy.uix.screenmanager import ScreenManager, Screen
-
-from kivy.properties import ObjectProperty, StringProperty, NumericProperty
-from kivy.graphics import Ellipse, RoundedRectangle, Rectangle, Color
+from kivy.properties import  StringProperty
 from kivy.config import Config
-
-from kivy.clock import Clock
-from kivy.graphics.texture import Texture
 from tkinter import *                   
-from tkinter import messagebox as mb      
 from tkinter import filedialog as fd    
-import os                              
-import shutil        
-
 import numpy as np
 import tensorflow as tf
-import matplotlib.pyplot as plt
 import keras
 import keras.utils as image
-from keras import applications
-from keras import Model
-import cv2
-from keras.layers import Activation, Dense
-from keras.preprocessing.image import ImageDataGenerator
-from keras.optimizers import Adam
-from sklearn.metrics import confusion_matrix
 import keras.backend as K
 
 
